@@ -29,7 +29,7 @@ function ProjectList() {
             image={`https://picsum.photos/id/${project.id}/280/180`}
             title={project.title}
             description={project.body}
-            href={`#post:${project.id}`}
+            href={`projects/${project.id}`}
             buttonLabel="Voir l'article"
           />
         </div>

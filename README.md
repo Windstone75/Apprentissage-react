@@ -10,3 +10,8 @@ npm run test
 Router dom
 
 outlet : mise la route enfant au niveau de la parent
+
+npm add prop-types
+npm add styled-components
+
+npm install bootstrap@4.6.0.

@@ -7,10 +7,8 @@ import {
 import { PageError } from './pages/PageError.jsx';
 import { IndexProjects } from './pages/projects/IndexProjects.jsx';
 import { ShowProject } from './pages/projects/ShowProject.jsx';
-
+import { Admin } from './pages/admin/IndexAdmin.jsx';
 import { Header } from './components/Header.jsx';
-
-import './styles/johndoe.css';
 
 const router = createBrowserRouter([
   {
@@ -58,7 +56,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'admin',
-        element: <div>Page ADMIN TODO</div>,
+        element: <Admin />,
       },
     ],
   },

@@ -1,4 +1,5 @@
-import {Button} from "./Button.jsx";
+import { PropTypes } from 'prop-types';
+import { Button } from './Button.jsx';
 
 /**
  * @param {string} image
@@ -9,18 +10,32 @@ import {Button} from "./Button.jsx";
  * @returns {JSX.Element}
  */
 export function Card({ image, title, description, href, buttonLabel }) {
-  const showButton = !!(href && buttonLabel)
+  const showButton = !!(href && buttonLabel);
 
   return (
     <div className="card">
       {image && <img src={image} className="card-img-top" alt="" />}
       <div className="card-body">
         {title && <h5 className="card-title">{title}</h5>}
-        {description && <p className="card-text">
-          {description}
-        </p>}
-        {showButton && <Button variant="primary" href={href}>{buttonLabel}</Button>}
+        {description && <p className="card-text">{description}</p>}
+        {showButton && (
+          <Button variant="primary" href={href}>
+            {buttonLabel}
+          </Button>
+        )}
       </div>
     </div>
   );
 }
+
+Card.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  href: PropTypes.string,
+  buttonLabel: PropTypes.string,
+};
+
+Card.defaultProps = {
+  title: 'Project empty title',
+};
